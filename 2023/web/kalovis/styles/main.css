@@ -1,0 +1,287 @@
+header {
+  width: 1520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  width: 15%;
+  padding: 10px;
+}
+header h1 a img {
+  width: 100%;
+}
+header nav {
+  width: 50%;
+}
+header nav a {
+  display: inline-block;
+  width: 16%;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+
+main #banner {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+main #banner p {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: yellow;
+}
+main #banner p:nth-child(1) {
+  background-image: url(../images/banner1.jpg);
+}
+main .section > div {
+  width: 1520px;
+  margin: 0 auto;
+}
+main .section > div h1 {
+  font-size: 3.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  margin: 200px 0 50px 0;
+}
+main .section #shop .shopSwiper .shopWrapper {
+  display: flex;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a > p {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a > p img {
+  height: 100%;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a .shopContents {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a .shopContents .shopInfo {
+  width: 300px;
+  height: 75px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a .shopContents .shopInfo h2 {
+  font-size: 1.563rem;
+  font-weight: 600;
+  letter-spacing: -2.5px;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a .shopContents .shopInfo p {
+  font-size: 0.938rem;
+  letter-spacing: -2px;
+  line-height: 1.3;
+}
+main .section #shop .shopSwiper .shopWrapper .shopSlide > a .shopContents .price {
+  font-size: 2.188rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+main .section #review {
+  height: 80vh;
+}
+main .section #review .reviewSwiper {
+  width: 100%;
+  height: 90%;
+}
+main .section #review .reviewSwiper .reviewSlide {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "b s1" "b s2";
+  height: 100%;
+}
+main .section #review .reviewSwiper .reviewSlide a {
+  border: 1.5px solid #777;
+  border-radius: 30px;
+  padding: 30px;
+}
+main .section #review .reviewSwiper .reviewSlide .big {
+  grid-area: b;
+  margin-right: 5%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+main .section #review .reviewSwiper .reviewSlide .big > p {
+  background-color: mistyrose;
+  width: 100%;
+  height: 75%;
+  border-radius: 30px;
+  background-image: url(../images/review1jpg.jpg);
+  background-size: cover;
+  background-position: center -250px;
+}
+main .section #review .reviewSwiper .reviewSlide .small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .section #review .reviewSwiper .reviewSlide .small > p {
+  background-color: midnightblue;
+  background-size: cover;
+  border-radius: 30px;
+  width: 50%;
+  height: 100%;
+  margin-right: 5%;
+  background-position: center;
+}
+main .section #review .reviewSwiper .reviewSlide .small .reviewContents {
+  width: 50%;
+}
+main .section #review .reviewSwiper .reviewSlide .small:nth-child(2) {
+  grid-area: s1;
+}
+main .section #review .reviewSwiper .reviewSlide .small:nth-child(2) > p {
+  background-image: url(../images/review2.jpg);
+}
+main .section #review .reviewSwiper .reviewSlide .small:nth-child(3) {
+  grid-area: s2;
+  margin-top: 5%;
+}
+main .section #review .reviewSwiper .reviewSlide .small:nth-child(3) > p {
+  background-image: url(../images/review3.jpg);
+}
+main .section #event .eventContents {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: "e1 e2 e2" "e3 e3 e4";
+}
+main .section #event .eventContents a {
+  background-color: pink;
+  background-size: cover;
+  background-position: center;
+}
+main .section #event .eventContents a:nth-child(1) {
+  grid-area: e1;
+  border-radius: 50px 0 50px 50px;
+  margin: 0 20px 20px 0;
+  background-image: url(../images/event1.jpg);
+}
+main .section #event .eventContents a:nth-child(2) {
+  grid-area: e2;
+  border-radius: 50px 0 50px 0;
+  margin-bottom: 20px;
+  background-image: url(../images/event2.jpg);
+}
+main .section #event .eventContents a:nth-child(3) {
+  grid-area: e3;
+  border-radius: 50px 0 50px 0;
+  margin-right: 20px;
+  background-image: url(../images/event1.jpg);
+}
+main .section #event .eventContents a:nth-child(4) {
+  grid-area: e4;
+  border-radius: 0 50px 50px 50px;
+  background-image: url(../images/event1.jpg);
+}
+main .section #sns {
+  margin-bottom: 200px;
+}
+main .section #sns .snsLink {
+  height: 750px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+main .section #sns .snsLink a {
+  background-color: yellow;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #eee;
+  height: 250px;
+  padding: 0 200px;
+}
+footer .footerTop {
+  border-bottom: 1px solid #000;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerTop .footerMenu {
+  display: flex;
+}
+footer .footerTop .footerMenu li::after {
+  content: "";
+  display: inline-block;
+  width: 1.5px;
+  height: 20px;
+  background-color: #000;
+  margin: 0 10px;
+  position: relative;
+  top: 5px;
+}
+footer .footerTop .sns {
+  display: flex;
+}
+footer .footerTop .sns li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  background-size: cover;
+}
+footer .footerTop .sns li:nth-child(1) a {
+  background-image: url(../images/blog.png);
+}
+footer .footerTop .sns li:nth-child(2) a {
+  background-image: url(../images/instagram.png);
+}
+footer .footerTop .sns li:nth-child(3) a {
+  background-image: url(../images/youtube.png);
+}
+footer .footerBtm {
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerBtm .footerInfo p span {
+  line-height: 1.8;
+}
+footer .footerBtm .footerInfo p span::after {
+  content: "";
+  width: 1.5px;
+  height: 15px;
+  display: inline-block;
+  background-color: #000;
+  position: relative;
+  top: 2px;
+  left: 3px;
+  margin: 0 5px;
+}
+footer .footerBtm .footerInfo p span:last-child::after {
+  display: none;
+}
+footer .footerBtm .cs p span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=main.css.map */

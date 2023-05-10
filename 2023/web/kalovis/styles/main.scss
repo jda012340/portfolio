@@ -1,0 +1,213 @@
+$f15px:0.938rem;
+$f25px:1.563rem;
+$f30px:1.875rem;
+$f35px:2.188rem;
+$f60px:3.75rem;
+
+header {
+    // background-color:gray;
+    width:1520px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:center;
+    h1 {
+        width:15%; padding:10px;
+        a { img {width:100%;}}
+    }
+    nav {
+        width:50%;
+        a {
+            // background-color:yellow;
+            display:inline-block; width:16%; padding:5px 0;
+            text-align:center; font-size:$f30px; text-transform:uppercase;
+        }
+    }
+}//e:header
+main {
+    #banner {   
+        width:100%; height:85vh; overflow:hidden; margin:0 auto;
+        p {width:100%; height:100%; background-position:center; background-size:cover;
+        background-color:yellow;}
+        p:nth-child(1) {background-image:url(../images/banner1.jpg);}
+        p:nth-child(2) {}
+    }//e:banner
+    .section {
+    //section 공통설정
+        > div{
+            width:1520px; margin:0 auto;
+            h1 {
+                font-size:$f60px; font-weight:600; text-transform:uppercase;
+                letter-spacing:-4px; margin:200px 0 50px 0;
+            }
+        }
+        #shop {
+            // background-color:gray;
+            .shopSwiper {
+                .shopWrapper {
+                    // background-color:lightgoldenrodyellow;
+                    display:flex;
+                    .shopSlide {
+                        // background-color:lightgreen;
+                        > a {
+                            // background-color:yellow;
+                            width:100%; height:600px;
+                            display:flex; flex-flow:column nowrap; justify-content:space-between;
+                            > p {
+                                // background-color:plum;
+                                width:100%; height:500px; overflow:hidden;
+                                img{height:100%;}
+                            }
+                            .shopContents {
+                                width:100%; height:80px; display:flex; align-items:center; justify-content:space-between;
+                                .shopInfo {
+                                    width:300px; height:75px; display:flex; flex-flow:column nowrap; justify-content:space-between;
+                                    h2 {font-size:$f25px; font-weight:600; letter-spacing:-2.5px;}
+                                    p {font-size:$f15px; letter-spacing:-2px; line-height:1.3;}
+                                }
+                                .price {
+                                    // background-color:lightsalmon;
+                                    font-size:$f35px; font-weight:900; letter-spacing:-2px; 
+                                }
+                            }
+                        }
+                    }//e:shop1
+                }//e:shopWrapper
+            }//e:shopSwiper
+        }//e:shop
+        #review {
+            // background-color:greenyellow;
+            height:80vh;
+            h1 {}
+            .reviewSwiper {
+                width:100%; height:90%;
+                .reviewSlide {
+                    // background-color:yellow;
+                    display:grid;
+                    grid-template-rows:repeat(2,1fr);
+                    grid-template-columns:repeat(2,1fr);
+                    grid-template-areas:
+                    'b s1'
+                    'b s2'
+                    ;
+                    height:100%;
+                    a {border:1.5px solid #777; border-radius:30px; padding:30px;}
+                    .big {
+                        // background-color:aqua;
+                        grid-area:b;margin-right:5%; display:flex; flex-flow:column nowrap; justify-content:space-between;
+                        > p {
+                            background-color:mistyrose;
+                            width:100%; height:75%; border-radius:30px;
+                            background-image:url(../images/review1jpg.jpg); background-size:cover; background-position:center -250px;
+                        }
+                        .reviewContents {
+                            // background-color:plum;
+                        }
+                    }
+                    .small {
+                        // background-color:lightgreen;
+                        display:flex; justify-content:space-between; align-items:center;
+                        > p {
+                            background-color:midnightblue; background-size:cover; border-radius:30px;
+                            width:50%; height:100%; margin-right:5%; background-position:center;
+                        }
+                        .reviewContents {width:50%;}
+                    }
+                    .small:nth-child(2) { grid-area:s1;
+                        > p {background-image:url(../images/review2.jpg);}
+                    }
+                    .small:nth-child(3) { grid-area:s2; margin-top:5%;
+                        > p {background-image:url(../images/review3.jpg);}
+                    }
+                }
+            }
+        }//e:review
+        #event {
+            .eventContents {
+                width:100%;
+                display:grid;
+                grid-template-rows:repeat(2, 300px);
+                grid-template-areas: 
+                'e1 e2 e2'
+                'e3 e3 e4'
+                ;
+                a {
+                    background-color:pink;
+                    background-size:cover; background-position:center;
+                }
+                a:nth-child(1) {
+                    grid-area:e1; border-radius:50px 0 50px 50px; margin:0 20px 20px 0;
+                    background-image:url(../images/event1.jpg);
+                }
+                a:nth-child(2) {
+                    grid-area:e2; border-radius:50px 0 50px 0; margin-bottom:20px;
+                    background-image:url(../images/event2.jpg);
+                }
+                a:nth-child(3) {
+                    grid-area:e3; border-radius:50px 0 50px 0; margin-right:20px;
+                    background-image:url(../images/event1.jpg);
+                }
+                a:nth-child(4) {
+                    grid-area:e4; border-radius:0 50px 50px 50px;
+                    background-image:url(../images/event1.jpg);
+                }
+            }
+        }//#e:event
+        #sns {
+            margin-bottom:200px;
+            .snsLink {
+                height:750px;
+                display:grid; grid-template-rows:repeat(2, 1fr); grid-template-columns:repeat(4, 1fr);
+                a {
+                    background-color:yellow; margin:10px; border-radius:20px;
+                }
+            }
+        }//e:sns
+    }//e:section
+}//e:main
+footer {
+    background-color:#eee; height:250px; padding:0 200px;
+    .footerTop {
+        // background-color:yellow;
+        border-bottom:1px solid #000;
+        height:70px; display:flex; justify-content:space-between; align-items:center;
+        .footerMenu {
+            display:flex;
+            li::after {
+                content:''; display:inline-block; width:1.5px; height:20px; background-color:#000; margin:0 10px; position:relative; top:5px;
+            }
+            li:last-child::after {
+                // display:none;
+            }
+        }//e:footeMenu
+        .sns {
+            display:flex;
+            li {
+                a {
+                    display:inline-block;
+                    width:40px; height:40px; margin-right:5px;
+                    background-size:cover;
+                }
+                // a:nth-child(1) {background-image:url();}
+            }
+            li:nth-child(1) {a{background-image:url(../images/blog.png);}}
+            li:nth-child(2) {a{background-image:url(../images/instagram.png);}}
+            li:nth-child(3) {a{background-image:url(../images/youtube.png);}}
+        }
+    }//e:gooterTop
+    .footerBtm {
+        height:180px;
+        display:flex; justify-content:space-between; align-items:center;
+        .footerInfo {
+            p {
+                span {line-height:1.8;}
+                span::after {
+                    content:''; width:1.5px; height:15px; display:inline-block; background-color:#000; position:relative; top:2px; left:3px; margin:0 5px;
+                }
+                span:last-child::after{display:none;}
+            }
+        }//e:footerInfo
+        .cs {
+            p {
+                span {display:block; font-size:2rem; font-weight:600; margin-bottom:10px;}
+            }
+        }
+    }//e:footerBtm
+}//e:footer
